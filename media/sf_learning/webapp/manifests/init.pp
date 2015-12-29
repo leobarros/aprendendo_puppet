@@ -40,4 +40,9 @@ class webapp {
   notify { 'Applying class webapp': 
   }
 
+file { '/var/www/html/index.html':
+ content => template('webapp/index.html.erb'),
+ owner   => 'apache',
+ require => User['apache']; 
+ }
 }
