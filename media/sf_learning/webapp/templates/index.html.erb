@@ -5,7 +5,10 @@
     <p>My operating system is <%= @operatingsystem %> </p>
     <p>My family system name is <%= @osfamily %> </p>
     <p>Kernel Version: <%= @kernelversion %> </p>
-    <p>Uptime: <%= @uptime %></p>
     <p>Versão do Puppet: <%= @puppetversion %> </p>
+    <br>
+    <% @fact_list.each do | fact | %>
+    <p> <%= fact %> </p>
+    <% end %>
   </body>
 </html>

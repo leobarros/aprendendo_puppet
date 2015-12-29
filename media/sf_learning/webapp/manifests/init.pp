@@ -36,6 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class webapp {
+  $fact_list = ["IP address $::ipaddress_eth1", "Uptime $::uptime"]
   include apache
   file { '/var/www/html/index.html':
    content => template('webapp/index.html.erb'),
